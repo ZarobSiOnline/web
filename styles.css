@@ -800,48 +800,6 @@ footer p { margin: 6px 0 0; }
   color: #bfcbc5;
 }
 
-.home .pdf-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: start;
-}
-
-.home .pdf-preview-grid figure {
-  margin: 0;
-}
-
-.home .pdf-preview-grid img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 210 / 297;
-  object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: #ffffff;
-  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
-}
-
-.home .pdf-preview-grid figcaption {
-  display: grid;
-  gap: 5px;
-  padding-top: 16px;
-}
-
-.home .pdf-preview-grid figcaption strong {
-  color: #ffffff;
-}
-
-.home .pdf-preview-grid figcaption span {
-  color: #aebcb6;
-  font-size: 0.9rem;
-  line-height: 1.45;
-}
-
-.home .preview-cta {
-  margin-top: 34px;
-}
-
 .home .simple-fit {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 72px;
@@ -1265,22 +1223,6 @@ footer p { margin: 6px 0 0; }
   .home .deliverables,
   .home .category-links {
     grid-template-columns: 1fr;
-  }
-
-  .home .pdf-preview-grid {
-    grid-template-columns: repeat(3, minmax(260px, 78vw));
-    overflow-x: auto;
-    padding: 4px 0 18px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .home .pdf-preview-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .home .pdf-preview-grid figure {
-    scroll-snap-align: start;
   }
 
   .home .deliverables article {
