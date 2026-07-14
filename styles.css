@@ -457,6 +457,17 @@ article p { margin-bottom: 18px; }
   margin-top: 18px;
 }
 
+.category-detail .coming-soon {
+  display: inline-flex;
+  margin: 8px 0 0;
+  padding: 7px 10px;
+  border: 1px solid rgba(69, 226, 166, 0.34);
+  border-radius: 6px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -989,6 +1000,18 @@ footer p { margin: 6px 0 0; }
 .home .category-links a::after {
   color: #0b8b65;
   content: "→";
+}
+
+.home .category-series-note {
+  margin: 24px 0 0;
+  padding: 18px 20px;
+  border-left: 3px solid var(--home-accent);
+  background: #ffffff;
+  color: var(--home-muted);
+}
+
+.home .category-series-note strong {
+  color: var(--home-ink);
 }
 
 .home .price-box {
