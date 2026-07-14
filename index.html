@@ -17,7 +17,7 @@
     <meta name="twitter:description" content="34-stranový slovenský ebook s realistickými možnosťami, príkladmi a pracovnými pomôckami.">
     <meta name="twitter:image" content="https://zarobsi.online/assets/ebook-cover-v1.4.png">
     <link rel="icon" href="/zarobsi-icon-clean-tube.png">
-    <link rel="stylesheet" href="styles.css?v=20260714-feedback-form">
+    <link rel="stylesheet" href="styles.css?v=20260715-contact-form2">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -295,64 +295,44 @@
       <section class="section feedback-section" id="spatna-vazba">
         <div class="wrap feedback-layout">
           <div class="feedback-copy">
-            <p class="eyebrow">Spätná väzba od testerov</p>
-            <h2>Povedz nám úprimne, čo na stránke funguje a čo nie.</h2>
-            <p>Tento formulár je zatiaľ určený ľuďom, ktorým sme poslali stránku na kontrolu. Zaujíma nás prvý dojem, zrozumiteľnosť ponuky aj to, či cena zodpovedá tomu, čo dostaneš.</p>
-            <p class="feedback-email-note">Po odoslaní sa otvorí tvoj email s pripravenou správou pre <strong>onlinezarobsi@gmail.com</strong>. Na stránke sa odpovede neukladajú.</p>
+            <p class="eyebrow">Máte otázku?</p>
+            <h2>Nie ste si istí, či je ebook pre vás?</h2>
+            <p>Chcete poradiť s výberom, obsahom ebooku alebo objednávkou? Napíšte nám, čo potrebujete vedieť. Radi vám odpovieme zrozumiteľne a bez nátlaku.</p>
+            <p class="feedback-email-note">Zatiaľ sa po odoslaní otvorí váš email s pripravenou správou pre <strong>onlinezarobsi@gmail.com</strong>. Neskôr formulár prepojíme s priamym odosielaním.</p>
           </div>
 
           <form class="feedback-form" id="feedback-form" action="mailto:onlinezarobsi@gmail.com" method="post" enctype="text/plain">
             <div class="feedback-fields">
               <label class="form-field">
-                <span>Meno alebo prezývka</span>
+                <span>Meno</span>
                 <input type="text" name="name" autocomplete="name" required>
               </label>
 
               <label class="form-field">
-                <span>Prvý dojem</span>
-                <select name="first_impression" required>
-                  <option value="">Vyber hodnotenie</option>
-                  <option value="5 - veľmi dobrý">5 - veľmi dobrý</option>
-                  <option value="4 - dobrý">4 - dobrý</option>
-                  <option value="3 - priemerný">3 - priemerný</option>
-                  <option value="2 - slabý">2 - slabý</option>
-                  <option value="1 - veľmi slabý">1 - veľmi slabý</option>
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+
+              <label class="form-field form-field--full">
+                <span>S čím vám môžeme poradiť?</span>
+                <select name="topic" required>
+                  <option value="">Vyberte tému</option>
+                  <option value="Obsah ebooku">Chcem vedieť, čo ebook obsahuje</option>
+                  <option value="Je ebook pre mňa">Nie som si istý, či je ebook pre mňa</option>
+                  <option value="Objednávka">Potrebujem poradiť s objednávkou</option>
+                  <option value="Konkrétny smer alebo ďalší ebook">Zaujíma ma konkrétny smer alebo ďalší ebook</option>
+                  <option value="Iná otázka">Mám inú otázku</option>
                 </select>
               </label>
 
               <label class="form-field form-field--full">
-                <span>Čo si na prvý pohľad pochopil, že predávame?</span>
-                <textarea name="what_is_sold" rows="4" required></textarea>
-              </label>
-
-              <label class="form-field form-field--full">
-                <span>Čo bolo nejasné, nedôveryhodné alebo ťa odradilo?</span>
-                <textarea name="what_is_unclear" rows="4" required></textarea>
-              </label>
-
-              <label class="form-field">
-                <span>Kúpil by si balík za 14,90 €?</span>
-                <select name="buy_intent" required>
-                  <option value="">Vyber odpoveď</option>
-                  <option value="Áno">Áno</option>
-                  <option value="Možno">Možno</option>
-                  <option value="Nie">Nie</option>
-                </select>
-              </label>
-
-              <label class="form-field">
-                <span>Aká cena ti pripadá primeraná?</span>
-                <input type="number" name="fair_price" min="0" step="0.50" inputmode="decimal" placeholder="napr. 9,90">
-              </label>
-
-              <label class="form-field form-field--full">
-                <span>Čo by si na stránke zmenil ako prvé?</span>
-                <textarea name="first_change" rows="4"></textarea>
+                <span>Vaša otázka</span>
+                <textarea name="message" rows="5" placeholder="Napíšte nám, čo potrebujete vedieť." required></textarea>
               </label>
             </div>
 
-            <button class="button" type="submit">Pripraviť email so spätnou väzbou</button>
-            <p class="form-note">Email sa odošle až po tvojom potvrdení v emailovej aplikácii.</p>
+            <button class="button" type="submit">Pripraviť email s otázkou</button>
+            <p class="form-note">Email sa odošle až po vašom potvrdení v emailovej aplikácii.</p>
           </form>
         </div>
       </section>
@@ -384,15 +364,13 @@
           const data = new FormData(form);
           const value = (name) => String(data.get(name) || "Neuvedené").trim() || "Neuvedené";
           const name = value("name");
-          const subject = `Spätná väzba k ZarobSi.online - ${name}`;
+          const topic = value("topic");
+          const subject = `Otázka k ZarobSi.online - ${topic}`;
           const body = [
-            `Meno alebo prezývka: ${name}`,
-            `Prvý dojem: ${value("first_impression")}`,
-            `Čo som pochopil, že stránka predáva:\n${value("what_is_sold")}`,
-            `Čo bolo nejasné alebo ma odradilo:\n${value("what_is_unclear")}`,
-            `Kúpil by som za 14,90 €: ${value("buy_intent")}`,
-            `Primeraná cena: ${value("fair_price")} €`,
-            `Čo by som zmenil ako prvé:\n${value("first_change")}`
+            `Meno: ${name}`,
+            `Email: ${value("email")}`,
+            `Téma: ${topic}`,
+            `Otázka:\n${value("message")}`
           ].join("\n\n");
 
           window.location.href = `mailto:onlinezarobsi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

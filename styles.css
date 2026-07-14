@@ -601,6 +601,10 @@ footer p { margin: 6px 0 0; }
   margin: 0;
 }
 
+.home section[id] {
+  scroll-margin-top: 68px;
+}
+
 .home .wrap {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
@@ -1305,6 +1309,10 @@ footer p { margin: 6px 0 0; }
 
   .home .feedback-layout {
     gap: 32px;
+  }
+
+  .home .feedback-section {
+    padding-top: 74px;
   }
 
   .home .feedback-form {
