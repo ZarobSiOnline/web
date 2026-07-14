@@ -4,7 +4,7 @@ ZarobSi.online je slovenská stránka a digitálny produkt pre ľudí, ktorí ch
 
 Hlavný produkt:
 - Názov: Jednoduchý online štart
-- Typ: 38-stranový PDF ebook + workbook + pripravené texty + tracker kontaktov
+- Typ: 34-stranový PDF ebook + workbook + pripravené texty + tracker kontaktov
 - Cena pri spustení: 14,90 EUR
 - Bežná cena: 24,90 EUR
 - URL: https://zarobsi.online/
